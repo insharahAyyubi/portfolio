@@ -28,7 +28,7 @@ const Education = () => {
         {education.map((edu, idx) => (
           <motion.div
             key={idx}
-            className="min-w-[800px]"
+            className="md:min-w-[800px]"
             initial={{ opacity: 0, x: idx % 2 === 0 ? -120 : 120 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: "easeIn" }}
