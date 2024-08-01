@@ -99,7 +99,7 @@ const experience = [
         position: "Research Associate",
         duration: "Nov 2021 - Nov 2022",
         location: "New Delhi, India",
-        img: "./cc.png",
+        img: "./ecell.png",
         points: [
           "▸ Conducted case studies analyzing the growth of emerging startups.",
           "▸ Authored in-depth articles on the latest trends in the entrepreneurial landscape.",
