@@ -1,16 +1,24 @@
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import useTheme from "./useTheme";
 
 const Navbar = () => {
   const [theme, setTheme] = useTheme();
+  const location = useLocation();
+
   const handleToggle = (e) => {
     console.log(e.target);
     console.log(e.target.checked);
     setTheme(e.target.checked ? "dark" : "light");
   };
 
+  const handleNavItemClick = (path) => {
+    setSelectedItem(path);
+  };
+
   const navItem = (
     <>
-      <li>
+      <li className={location.pathname === "/" ? "text-fuchsia-500" : ""}>
         <a
           href="/"
           className="focus:outline-none hover:bg-transparent active:bg-opacity-0 active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
@@ -18,7 +26,9 @@ const Navbar = () => {
           Home
         </a>
       </li>
-      <li>
+      <li
+        className={location.pathname === "/education" ? "text-fuchsia-500" : ""}
+      >
         <a
           href="/education"
           className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
@@ -26,7 +36,11 @@ const Navbar = () => {
           Education
         </a>
       </li>
-      <li>
+      <li
+        className={
+          location.pathname === "/experience" ? "text-fuchsia-500" : ""
+        }
+      >
         <a
           href="/experience"
           className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
@@ -34,7 +48,9 @@ const Navbar = () => {
           Experience
         </a>
       </li>
-      <li>
+      <li
+        className={location.pathname === "/projects" ? "text-fuchsia-500" : ""}
+      >
         <a
           href="/projects"
           className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
@@ -42,7 +58,9 @@ const Navbar = () => {
           Projects
         </a>
       </li>
-      <li>
+      <li
+        className={location.pathname === "/contact" ? "text-fuchsia-500" : ""}
+      >
         <a
           href="/contact"
           className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"

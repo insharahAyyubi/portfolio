@@ -14,11 +14,9 @@ const Education = () => {
         <h1 className="text-5xl mt-8 mb-6 bg-gradient-to-r from-red-400 via-pink-400 to-purple-500 text-transparent bg-clip-text">
           Education
         </h1>
-       
-          {education.map((edu, idx) => (
-            <EduCard data={edu} key={idx} />
-          ))}
-   
+        {education.map((edu, idx) => (
+          <EduCard data={edu} key={idx} />
+        ))}
       </div>
       <Certification />
       <div className="flex flex-row items-center justify-around mt-24 m-8">
