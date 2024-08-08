@@ -10,12 +10,16 @@ const Hero = () => {
         className="w-full order-2 text-center sm:text-start md:order-1 md:w-1/2 mt-5"
       >
         <div className="space-y-10 p-4 md:p-0 ml-0">
-          <h1 className="text-6xl font-normal mb-4">
+          <motion.h1
+            whileHover={{ x: 12, scale: 1.03}}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="text-6xl font-normal mb-4"
+          >
             Insharah Ayyubi
             <span className="text-4xl bg-gradient-to-r from-red-400 via-pink-400 to-purple-500 inline-block font-light mt-4 text-transparent bg-clip-text">
               Software Developer
             </span>
-          </h1>
+          </motion.h1>
           <p className="font-light text-2xl text-slate-700 dark:text-slate-100">
             Dedicated to creating seamless, user-friendly applications with a
             blend of creativity and technical prowess. Transforming visions into

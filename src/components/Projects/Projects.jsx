@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Project_Card from "./Project_Card";
-import { projects } from "../../assets/data";
+import Projects_Section from "./Projects_Section";
+import { personal_projects, collab_projects } from "../../assets/data";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -35,31 +35,8 @@ const Projects = () => {
             </p>
           </motion.div>
         </div>
-        <div className="flex flex-row items-center justify-around mt-24 m-10 md:m-20">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              visible: {
-                opacity: 1,
-                transition: { when: "beforeChildren", staggerChildren: 0.3 },
-              },
-              hidden: { opacity: 0 },
-            }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8"
-          >
-            {projects.map((item) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeInOut" }}
-              >
-                <Project_Card item={item} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        <Projects_Section title="Personal Projects" projects={personal_projects} />;
+        <Projects_Section title="Collaborative Projects" projects={collab_projects} />;
       </div>
       <Footer />
     </div>
