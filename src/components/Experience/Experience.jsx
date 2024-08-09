@@ -20,7 +20,7 @@ const Experience = () => {
     <div>
       <Navbar />
       <div>
-        <div className="flex flex-col md:flex-row items-center justify-around m-24 mt-0 mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-around mx-12 md:mx-24 mt-0 mb-8">
           <motion.div
             className="basis-1/2"
             initial="hidden"
@@ -49,7 +49,7 @@ const Experience = () => {
         </div>
 
         {/* Accordion */}
-        <div className="mx-12 mb-10 flex flex-col items-center justify-center">
+        <div className="mx-6 mb-10 flex flex-col items-center justify-center">
           {experience.map((acc, index) => (
             <Accordion
               key={index}
