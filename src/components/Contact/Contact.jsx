@@ -96,7 +96,7 @@ const Contact = () => {
         >
           <img
             className="max-h-[500px] object-contain"
-            src="./contact.png"
+            src="./cc.png"
             alt="Contact"
           />
         </motion.div>

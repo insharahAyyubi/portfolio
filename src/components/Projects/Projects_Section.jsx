@@ -4,7 +4,7 @@ import Project_Card from "./Project_Card"; // Adjust the import based on your fi
 const Projects_Section = ({ title, projects }) => {
   return (
     <div>
-      <h1 className="text-3xl text-center mt-12 mx-4">{title}</h1>
+      <h1 className="text-3xl text-center mx-4">{title}</h1>
       <div className="flex flex-row items-center justify-around mt-24 m-10 md:m-20">
         <motion.div
           initial="hidden"

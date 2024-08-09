@@ -10,7 +10,7 @@ const Projects = () => {
     <div>
       <Navbar />
       <div>
-        <div className="flex flex-col md:flex-row items-center justify-between mx-8 px-2 mt-4 md:mx-28">
+        <div className="flex flex-col h-screen pb-24 md:flex-row items-center justify-between mx-8 px-2 mt-4 md:mx-28">
           <motion.div
             className="basis-2/3 order-1 md:-order-none mt-10 md:mt-0"
             initial={{ opacity: 0, x: -100 }}

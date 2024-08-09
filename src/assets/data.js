@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const education = [
   {
@@ -166,8 +166,7 @@ const personal_projects = [
   {
     id: uuidv4(),
     title: "Tic-Tac-Toe",
-    description:
-      "Build the game with an appealing UI and other features.",
+    description: "Build the game with an appealing UI and other features.",
     tech: ["HTML", "CSS", "JS"],
     created: "05-11-2022",
     link: "https://github.com/insharahAyyubi/tic_tac_toe",
@@ -179,13 +178,12 @@ const personal_projects = [
       "A simple weather app that fetches data from OpenWeatherMap API.",
     tech: ["HTML", "CSS", "JS"],
     created: "10-06-23",
-    link: "https://github.com/insharahAyyubi",
+    link: "https://github.com/insharahAyyubi/weatherFinder",
   },
   {
     id: uuidv4(),
     title: "Invest Cal",
-    description:
-      "A simple app for calculating yearly interest and savings.",
+    description: "A simple app for calculating yearly interest and savings.",
     tech: ["React"],
     created: "15-07-23",
     link: "https://github.com/insharahAyyubi/interestCalc",
@@ -196,7 +194,8 @@ const collab_projects = [
   {
     id: uuidv4(),
     title: "Zetpeak",
-    description: "Created the landing page and added animations using Intersection Observer API.",
+    description:
+      "Created the landing page and added animations using Intersection Observer API.",
     tech: ["HTML", "CSS", "JS"],
     created: "06-06-23",
     link: "https://github.com/insharahAyyubi/Zetpeak_Website",
@@ -204,8 +203,7 @@ const collab_projects = [
   {
     id: uuidv4(),
     title: "Computer Engg. Website",
-    description:
-      "Build the placement and developer pages, with appealing UI.",
+    description: "Build the placement and developer pages, with appealing UI.",
     tech: ["React"],
     created: "03-11-2023",
     link: "https://github.com/insharahAyyubi/comp-engg",
@@ -213,8 +211,7 @@ const collab_projects = [
   {
     id: uuidv4(),
     title: "RCA Website",
-    description:
-      "Build the frontend of the website, for a coaching academy.",
+    description: "Build the frontend of the website, for a coaching academy.",
     tech: ["React"],
     created: "25-07-23",
     link: "https://github.com/RCA-JMI/frontend",
@@ -230,4 +227,41 @@ const collab_projects = [
   },
 ];
 
-export { education, certificates, experience, personal_projects, collab_projects };
+const aboutData = [
+  {
+    id: uuidv4(),
+    imgSrc: "./web.png",
+    title: "Web Development",
+    points: [
+      "▸ Designing dynamic, responsive front-ends with React-Redux for seamless user experiences.",
+      "▸ Developing robust back-end solutions with Node, Express, and Flask for scalable and efficient applications.",
+    ],
+  },
+  {
+    id: uuidv4(),
+    imgSrc: "./cloud.png",
+    title: "Cloud Infrastructure",
+    points: [
+      "▸ Leveraging cloud platforms for efficiently deploying web and mobile apps, ensuring scalability and high availability.",
+      "▸ Experience in working with Google Cloud for scalable infrastructure and Firebase for real-time data, authentication, etc.",
+    ],
+  },
+  {
+    id: uuidv4(),
+    imgSrc: "./ui.png",
+    title: "UI/UX",
+    points: [
+      "▸ Designing visually appealing and user-friendly interfaces in Figma",
+      "▸ Specializing in creating enjoyable user experiences across websites and mobile apps.",
+    ],
+  },
+];
+
+export {
+  education,
+  certificates,
+  experience,
+  personal_projects,
+  collab_projects,
+  aboutData,
+};

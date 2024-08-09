@@ -18,10 +18,10 @@ const Navbar = () => {
 
   const navItem = (
     <>
-      <li className={location.pathname === "/" ? "text-fuchsia-500" : ""}>
+      <li className={location.pathname === "/" ? "text-fuchsia-500" : "" }>
         <a
           href="/"
-          className="focus:outline-none hover:bg-transparent active:bg-opacity-0 active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
+          className="focus:bg-transparent hover:bg-transparent hover:text-fuchsia-500 hover:scale-105"
         >
           Home
         </a>
@@ -31,7 +31,7 @@ const Navbar = () => {
       >
         <a
           href="/education"
-          className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
+          className="focus:bg-transparent hover:bg-transparent hover:text-fuchsia-500 hover:scale-105"
         >
           Education
         </a>
@@ -43,7 +43,7 @@ const Navbar = () => {
       >
         <a
           href="/experience"
-          className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
+          className="focus:bg-transparent hover:bg-transparent hover:text-fuchsia-500 hover:scale-105"
         >
           Experience
         </a>
@@ -53,7 +53,7 @@ const Navbar = () => {
       >
         <a
           href="/projects"
-          className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
+          className="focus:bg-transparent hover:bg-transparent hover:text-fuchsia-500 hover:scale-105"
         >
           Projects
         </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
       >
         <a
           href="/contact"
-          className="focus:outline-none hover:bg-transparent active:bg-transparent hover:text-fuchsia-500 hover:scale-105"
+          className="focus:bg-transparent hover:bg-transparent hover:text-fuchsia-500 hover:scale-105"
         >
           Contact
         </a>

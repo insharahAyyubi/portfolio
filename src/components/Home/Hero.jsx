@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="max-w-screen-2xl h-full md:h-screen container mx-auto md:px-20 px-4 flex flex-col md:flex-row items-center justify-between pb-28">
+    <div className="max-w-screen-2xl h-full md:h-screen container mx-auto md:px-20 px-4 flex flex-col md:flex-row items-center justify-between pb-12 md:pb-28">
       <motion.div
         initial={{ x: -100, opacity: 0 }} // Start position off-screen to the right
         animate={{ x: 0, opacity: 1 }} // End position at the original spot
@@ -11,7 +11,7 @@ const Hero = () => {
       >
         <div className="space-y-10 p-4 md:p-0 ml-0">
           <motion.h1
-            whileHover={{ x: 12, scale: 1.03}}
+            whileHover={{ x: 12, scale: 1.03 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="text-6xl font-normal mb-4"
           >
@@ -75,12 +75,18 @@ const Hero = () => {
             </a>
           </div>
 
-          <button
-            className="bg-pink-300 px-6 transition duration-400 ease-in-out
-          rounded-md py-2 outline-none mt-3 md:mt-8 hover:bg-pink-400 dark:text-black"
+          <a
+            href="https://drive.google.com/file/d/1LyhVW2GLeuVhJjwA1LMJFF0le0NxOo2v/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Resume
-          </button>
+            <button
+              className="bg-pink-300 px-6 transition duration-400 ease-in-out
+    rounded-md py-2 outline-none mt-8 md:mt-8 hover:bg-pink-400 dark:text-black"
+            >
+              Resume
+            </button>
+          </a>
         </div>
       </motion.div>
       <motion.div
