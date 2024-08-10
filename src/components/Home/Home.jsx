@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Skills from "./Skills";
 import Footer from "../Footer";
 import About from "./About";
+import BackToTop from "../BackToTop";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Hero />
       <Skills />
       <About />
+      <BackToTop />
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Projects_Section from "./Projects_Section";
+import BackToTop from "../BackToTop";
 import { personal_projects, collab_projects } from "../../assets/data";
 import { motion } from "framer-motion";
 
@@ -35,9 +36,18 @@ const Projects = () => {
             </p>
           </motion.div>
         </div>
-        <Projects_Section title="Personal Projects" projects={personal_projects} />;
-        <Projects_Section title="Collaborative Projects" projects={collab_projects} />;
+        <Projects_Section
+          title="Personal Projects"
+          projects={personal_projects}
+        />
+        ;
+        <Projects_Section
+          title="Collaborative Projects"
+          projects={collab_projects}
+        />
+        ;
       </div>
+      <BackToTop />
       <Footer />
     </div>
   );

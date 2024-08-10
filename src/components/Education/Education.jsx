@@ -5,6 +5,7 @@ import EduCard from "./EduCard";
 import { education, certificates } from "../../assets/data";
 import Certification from "./Certification";
 import CertificateCard from "./CertificateCard";
+import BackToTop from "../BackToTop";
 import { motion } from "framer-motion";
 
 const Education = () => {
@@ -51,6 +52,7 @@ const Education = () => {
           ))}
         </div>
       </div>
+      <BackToTop />
       <Footer />
     </div>
   );

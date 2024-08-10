@@ -3,6 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Accordion from "./Accordion";
 import ExpCard from "./ExpCard";
+import BackToTop from "../BackToTop";
 import { experience } from "../../assets/data";
 
 const Experience = () => {
@@ -71,6 +72,7 @@ const Experience = () => {
           ))}
         </div>
       </div>
+      <BackToTop />
       <Footer />
     </div>
   );

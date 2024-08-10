@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import BackToTop from "../BackToTop";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
@@ -89,9 +90,9 @@ const Contact = () => {
       </motion.div>
       <div className="mx-8 md:mx-28 mb-4 bg-transparent px-8 rounded-lg flex flex-col md:flex-row items-center justify-evenly">
         <motion.div
-          initial={{ opacity: 0, x: -100 }} // Start off-screen from the left
-          animate={{ opacity: 1, x: 0 }} // End at the original position
-          transition={{ duration: 1.5, ease: "easeOut" }} // Smooth transition
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
           className="basis-2/3"
         >
           <img
@@ -101,9 +102,9 @@ const Contact = () => {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 100 }} // Start off-screen from the right
-          animate={{ opacity: 1, x: 0 }} // End at the original position
-          transition={{ duration: 1.75, ease: "easeOut" }} // Smooth transition
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.75, ease: "easeOut" }}
           className="md:basis-1/2 w-full"
         >
           <form onSubmit={onSubmit} className="space-y-6">
@@ -149,6 +150,7 @@ const Contact = () => {
           </span>
         </motion.div>
       </div>
+      <BackToTop />
       <Footer />
     </div>
   );
