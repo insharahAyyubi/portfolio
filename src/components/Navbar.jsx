@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import useTheme from "./useTheme";
 
@@ -15,6 +15,25 @@ const Navbar = () => {
   const handleNavItemClick = (path) => {
     setSelectedItem(path);
   };
+
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    // the main area where we want to implement the functionality
+    const handlescroll = () => {
+      if (window.scrollY > 90) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handlescroll);
+
+    // the cleanup function
+    // each time useEffect is destroyed and this function runs to cleanup
+    return () => {
+      window.removeEventListener("scroll", handlescroll);
+    };
+  }, []);
 
   const navItem = (
     <>
@@ -80,7 +99,15 @@ const Navbar = () => {
           <div className="fixed bottom-0 left-0 right-0 top-0 z-[-2] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
       )}
-      <div className="navbar sticky top-0 bg-transparent container mx-auto px-2 md:px-12">
+      <div
+        className={`navbar h-[50px] pr-4 md:px-12 top-0 ${
+          sticky
+            ? theme === "light"
+              ? "fixed z-10 bg-gradient-to-r from-pink-100 via-slate-50 to-fuchsia-200 border border-x-0 border-t-0 border-b-slate-200"
+              : "fixed z-10 bg-gradient-to-r from-slate-800 via-slate-950 to-slate-800 border border-x-0 border-t-0 border-b-slate-700"
+            : "bg-transparent"
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
